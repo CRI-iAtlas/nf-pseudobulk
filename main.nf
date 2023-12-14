@@ -2,7 +2,7 @@
 
 //to run in the command line: nextflow run nextflow_test.nf
 
-params.h5ad_files = "/data/input_data_v1.csv"
+params.h5ad_files = "https://github.com/CRI-iAtlas/nf-htan-scripts/blob/main/data/input_data_v1.csv"
 params.geneset_file = "syn52138713"
 
 Channel
