@@ -20,7 +20,7 @@ def main():
     geneset_file = sys.argv[2] # syn52138713
     dataset_name = sys.argv[3]
     upload_location = sys.argv[4]  # syn52142300
-#
+
     #load data
     print("Downloading data...")
     adata_synapse = syn.get(pseudobulk_file)
@@ -31,7 +31,7 @@ def main():
     reactome = pd.read_csv(geneset_synapse.path)
 
     #adding col with cell type information
-    ps_data['group'] = ps_data.index.str.rsplit('_', 1).str.get(-1)
+    ps_data['group'] = ps_data.index.str.rsplit('_', n=1).str.get(-1)
 
     # let's run gsea for the sum of gene expression values each cell type
     print("Running GSEA for sum of cell types")
@@ -55,7 +55,7 @@ def main():
     file_upload(syn, pd.concat([sum_scores, scores]), dataset_name, "gsea_scores.csv", upload_location)
     file_upload(syn, pd.concat([sum_norm, norm]),  dataset_name, "gsea_norm.csv", upload_location)
     file_upload(syn, pd.concat([sum_pvals, pvals]),  dataset_name, "gsea_pvals.csv", upload_location)
-    
-       
+
+
 if __name__ == '__main__':
 	main()
