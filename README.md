@@ -5,9 +5,9 @@ nf-pseudobulk is a Nextflow pipeline used to perform Gene Set Enrichment Analysi
 - Runs pseudobulk aggregation on scRNA-seq h5ad files by summing expresesion values per patient and per cell type
 - Runs GSEA for the sum of cell types and for each resulting pseudobulk sample
 
-### h5ad Preprocessing
+## h5ad Preprocessing
 
-### Usage
+## Usage
 
 Before executing the workflow, create a Nextflow secret called `SYNAPSE_AUTH_TOKEN` using a Synapse Personal Access Token.
 
@@ -22,7 +22,7 @@ The input to this pipeline is a CSV samplesheet specified with the `--input` par
 
 An example input sheet can be found at [data/test_samplesheet.csv](https://github.com/CRI-iAtlas/nf-pseudobulk/blob/main/data/test_samplesheet.csv)
 
-#### Samplesheet requirements:
+### Samplesheet requirements:
 
 - `dataset`: Name of dataset
 - `h5ad`: Synapse ID of input h5ad file to process
@@ -31,7 +31,7 @@ An example input sheet can be found at [data/test_samplesheet.csv](https://githu
 - `sample_id`: Name in obs component of h5ad with Sample IDs
 - `cell_type_id`: Name in obs component of h5ad with Cell Type ID
 
-### Outputs
+## Outputs
 
 Output CSV files will be stored in Synapse in the directory specified by the `upload_folder` parameter
 
