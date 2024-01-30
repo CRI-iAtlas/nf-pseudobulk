@@ -1,6 +1,6 @@
 #!/usr/bin/env nextflow
 
-params.geneset_file = "syn52138713"
+params.geneset_file = "syn53437619"
 
 if (params.input) { 
   params.input = file(params.input) } else { 
@@ -26,8 +26,7 @@ process runPseudobulk {
 
   script:
   """
-  nf_run_pseudobulk.py ${synapse_input_file_id} 
-    ${sample_id} ${cell_type_id} ${counts_layer}
+  nf_run_pseudobulk.py ${synapse_input_file_id} ${sample_id} ${cell_type_id} ${counts_layer}
   """
 }
 
@@ -49,8 +48,7 @@ process runPseudobulkGSEA {
 
   script:
   """
-  nf_run_scrna_pseudobulk_gsea.py ${pseudobulkResults} 
-    ${genesetFile} ${dataset} ${upload_folder}
+  nf_run_scrna_pseudobulk_gsea.py ${pseudobulkResults} ${genesetFile} ${dataset} ${upload_folder}
   """
 }
 
