@@ -6,6 +6,9 @@ nf-pseudobulk is a Nextflow pipeline used to perform Gene Set Enrichment Analysi
 - Runs GSEA for the sum of cell types and for each resulting pseudobulk sample
 
 ## h5ad Preprocessing
+The h5ad file for use as input in this workflow should have the following characteristics:
+- counts data, with the preprocessing of your choosing, stored as a layer. The name of this layer should be provided in the input samplesheet (more details below). Please note: conversion to counts values to z-scores is not advised, as subsequent steps in the processing don't allow negative values.
+- genes identified by their Gene Symbol.
 
 ## Usage
 
