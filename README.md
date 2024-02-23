@@ -7,8 +7,8 @@ nf-pseudobulk is a Nextflow pipeline used to perform Gene Set Enrichment Analysi
 
 ## h5ad Preprocessing
 The h5ad file for use as input in this workflow should have the following characteristics:
-- counts data, with the preprocessing of your choosing, stored as a layer. The name of this layer should be provided in the input samplesheet (more details below). Please note: conversion to counts values to z-scores is not advised, as subsequent steps in the processing don't allow negative values.
-- genes identified by their Gene Symbol.
+- Counts data, with the preprocessing of your choosing, stored as a layer. The name of this layer should be provided in the input samplesheet (more details below). Please note: conversion to counts values to z-scores is not advised, as subsequent steps in the processing don't allow negative values.
+- Genes identified by their Gene Symbol.
 
 ## Usage
 
@@ -31,8 +31,8 @@ An example input sheet can be found at [data/test_samplesheet.csv](https://githu
 - `h5ad`: Synapse ID of input h5ad file to process
 - `upload_folder`: Synapse ID of directory to store outputs
 - `counts_layer`: Name of layer in h5ad with raw counts (default: `counts`)
-- `sample_id`: Name in obs component of h5ad with Sample IDs
-- `cell_type_id`: Name in obs component of h5ad with Cell Type ID
+- `sample_id`: Name of column in h5ad containing Sample IDs
+- `cell_type_id`: Name of column in h5ad containing Cell Type ID
 
 ## Outputs
 
