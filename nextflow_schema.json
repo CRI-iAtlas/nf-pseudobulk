@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/CRI-iAtlas/nf-pseudobulk/master/nextflow_schema.json",
+  "title": "CRI-iAtlas/nf-pseudobulk parameters",
+  "description": "Nextflow pipeline to run GSEA on pseudobulk scRNAseq data",
+  "type": "object",
+  "definitions": {
+    "parameters": {
+      "title": "Input options",
+      "type": "object",
+      "fa_icon": "fas fa-terminal",
+      "description": "Define where the pipeline should find input data.",
+      "required": ["input"],
+      "properties": {
+        "input": {
+          "type": "string",
+          "format": "file-path",
+          "mimetype": "text/csv",
+          "description": "Path to a CSV samplesheet"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/parameters"
+    }
+  ]
+}
