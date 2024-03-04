@@ -25,5 +25,10 @@
     {
       "$ref": "#/definitions/parameters"
     }
-  ]
+  ],
+  "properties": {
+    "geneset_file": {
+      "type": "string"
+    }
+  }
 }
