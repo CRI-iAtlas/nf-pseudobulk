@@ -29,14 +29,11 @@ An example input sheet can be found at [data/test_samplesheet.csv](https://githu
 
 - `dataset`: Name of dataset
 - `h5ad`: Synapse ID of input h5ad file to process
-- `upload_folder`: Synapse ID of directory to store outputs
 - `counts_layer`: Name of layer in h5ad with raw counts (default: `counts`)
 - `sample_id`: Name of column in h5ad containing Sample IDs
 - `cell_type_id`: Name of column in h5ad containing Cell Type ID
 
 ## Outputs
-
-Output CSV files will be stored in Synapse in the directory specified by the `upload_folder` parameter
 
 Output files:
 - `gsea_pvals.csv` : p-value for the enrichment test
